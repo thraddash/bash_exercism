@@ -24,16 +24,15 @@ echo "###############################"
 echo ""
 echo "One for ${1:-you}, one for me."
 echo "###############################"
-echo ""
-name=$1
-if [ -z "$name" ]; then
-  echo "One for you, one for me."
-else
-  echo "One for $name, one for me."
-fi
 
-## echo "${var:?message}"
-## echo "If var is null or unset, message is printed to standard error. This checks that variables are set correctly."
-    
-## echo "${var:+word}"
-## echo "If var is set, word is substituted for var. The value of var does not change."
+main() {
+  name=$1
+  if [ -z "$name" ]; then
+    echo "One for you, one for me."
+  else
+    echo "One for $name, one for me."
+  fi
+}
+
+main "$@"
+
