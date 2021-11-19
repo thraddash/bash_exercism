@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+## https://exercism.org/tracks/bash/exercises/two-fer
 
 var=$1
 name=${var:=you}
