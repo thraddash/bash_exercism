@@ -16,6 +16,7 @@ if [ "$#" -eq 2 ]; then
           elif [ "${x:$i:1}" != "${y:$i:1}" ];
             then
               ((count++))
+              # parameter expansion ${parameter:offset:length}
               #echo "$count ${x:$i:1} ${y:$i:1}"
           fi  
         done  
